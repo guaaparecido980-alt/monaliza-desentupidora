@@ -7,11 +7,11 @@ Legenda: ✅ confirmado · ⚠️ visto, mas precisa confirmar · ❌ falta (ped
 | Nome da marca | ✅ | MONALIZA Desentupidora (logo) |
 | Logo | ✅ (só foto) | `marca/foto-original-logo-no-celular.jpeg` → vetorizar em SVG |
 | Fundação | ⚠️ | "Desde 1996" escrito na logo |
-| WhatsApp / telefone | ⚠️ | +55 41 9820-6609 (print da tela; parece faltar 1 dígito — confirmar o número completo) |
-| Cidade principal | ⚠️ | Curitiba/PR (DDD 41; mesmo dono da Máxima, que atende Curitiba) |
-| Cidades atendidas | ❌ | A Máxima lista: Curitiba, São José dos Pinhais, Pinhais, Colombo, Araucária, Almirante Tamandaré, Fazenda Rio Grande, Campo Largo. Confirmar se a Monaliza atende as mesmas |
+| WhatsApp / telefone | ❌ | O dono vai passar depois (é a ÚNICA coisa diferente da Máxima). Construir tudo com o número vindo de `empresa.ts` |
+| Cidade principal | ✅ | Curitiba/PR |
+| Cidades atendidas | ✅ | Igual à Máxima: Curitiba, São José dos Pinhais, Pinhais, Colombo, Araucária, Almirante Tamandaré, Fazenda Rio Grande, Campo Largo |
 | Bairros atendidos | ❌ | — |
-| Horário (24h?) | ❌ | A Máxima diz 24h/7 dias. Confirmar para a Monaliza |
+| Horário | ✅ | 24 horas, 7 dias por semana (confirmado pelo dono) |
 | Endereço público | ❌ | Provavelmente atendimento só no local do cliente (sem loja). Confirmar |
 | CNPJ | ❌ | Não usar o CNPJ da Máxima sem o cliente confirmar que é o mesmo |
 | E-mail | ❌ | — |
@@ -23,6 +23,10 @@ Legenda: ✅ confirmado · ⚠️ visto, mas precisa confirmar · ❌ falta (ped
 | Fotos reais (equipe, caminhão, serviços) | ❌ | Pedir ao cliente. Elevam muito a confiança |
 | Avaliações Google | ❌ | Só usar se forem reais e verificáveis |
 | Perfil da Empresa no Google | ❌ | Criar/confirmar depois do site |
+
+## Confirmado pelo dono em 17/11/2026
+"Mesma cidade, é tudo igual, só vai mudar o WhatsApp. Sim, atende 24 horas."
+Ou seja: área atendida, serviços e forma de trabalho são **os mesmos da Máxima**. Os **textos** continuam tendo que ser originais (SEO). CNPJ/e-mail da Máxima: não exibir no site da Monaliza sem perguntar (liga as duas marcas no Google).
 
 ## Perguntas para o Gustavo levar ao cliente
 1. Qual é o número completo do WhatsApp? É o mesmo para ligar?

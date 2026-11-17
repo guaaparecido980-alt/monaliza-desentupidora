@@ -2,7 +2,7 @@
 
 Fonte: `referencias/site-maxima/index.html`. É o código do site maximadesentupidoradias.com, do mesmo dono, e foi lido direto do repositório em 17/11/2026.
 
-**Confirmados no site da Máxima** (o mesmo dono oferece). Para a Monaliza, **confirmar com o cliente** antes de criar a página.
+**Confirmados para a Monaliza** — o dono disse em 17/11 que é tudo igual à Máxima (mesmos serviços, mesma área, 24h). Pode criar as páginas.
 
 | # | Serviço | Problema que resolve | Cliente típico | Página própria? | Palavras-chave iniciais (validar volume) |
 |---|---|---|---|---|---|
@@ -14,10 +14,10 @@ Fonte: `referencias/site-maxima/index.html`. É o código do site maximadesentup
 | 6 | Hidrojateamento | Tubulação com crosta/gordura/raiz; limpeza preventiva | Condomínio, indústria, comércio | Sim (a logo mostra hidrojateadora) | hidrojateamento curitiba |
 | 7 | Caça-vazamento | Conta de água alta, infiltração sem causa visível | Residência, condomínio | Sim | caça vazamento curitiba, detecção de vazamento |
 | 8 | Encanador hidráulico | Reparos hidráulicos em geral | Residência | Sim | encanador curitiba |
-| 9 | Manutenção emergencial | Urgência fora de hora | Todos | Avaliar (pode ser seção, não página) | desentupidora 24h curitiba (**só se o 24h for confirmado**) |
+| 9 | Manutenção emergencial | Urgência fora de hora | Todos | Avaliar (pode ser seção, não página) | desentupidora 24h curitiba (24h confirmado) |
 
 **Prováveis, não confirmados** (citados pelo briefing como exemplo e não vistos na Máxima): limpeza de redes pluviais/calhas, inspeção de tubulação com câmera. **Não criar página sem confirmação.**
 
 Outras seções da Máxima que servem de **assunto** (com texto 100% novo): sinais de que precisa chamar (água descendo devagar, cheiro, retorno, bolhas, conta alta, caixa transbordando), processo em 4 passos, FAQ (24h? quebra piso? atende condomínio?), regiões.
 
-Afirmações da Máxima que **não podem ir para a Monaliza sem confirmação**: 24h, chegada rápida, orçamento fechado antes, sem quebrar piso, equipe identificada, garantia.
+24h está confirmado. Pelo "é tudo igual" do dono, os diferenciais da Máxima (orçamento antes de começar, sem quebrar piso quando possível, equipe identificada, garantia) valem também, mas **prazo de garantia e tempo de chegada não têm número confirmado**: não escrever números.

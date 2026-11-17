@@ -8,15 +8,25 @@ export const empresa = {
   nomeCurto: "Monaliza",
   /** Logo diz "Desde 1996" — CONFIRMAR antes de exibir em texto ou schema. */
   fundacao: null as number | null,
-  /** Somente dígitos com DDI. Print mostrava +55 41 9820-6609 (incompleto?) — CONFIRMAR. */
+  /** Somente dígitos com DDI. PENDENTE: o dono vai passar o número depois. Enquanto null, os botões de WhatsApp não aparecem/ficam em modo "em breve". */
   whatsapp: null as string | null,
   telefone: null as string | null,
   email: null as string | null,
   dominio: null as string | null,
-  cidadePrincipal: { nome: "Curitiba", uf: "PR" }, // CONFIRMAR
-  cidadesAtendidas: [] as string[], // CONFIRMAR (não copiar da Máxima sem OK)
-  atende24h: null as boolean | null,
-  horario: null as string | null,
+  cidadePrincipal: { nome: "Curitiba", uf: "PR" }, // confirmado pelo dono (17/11)
+  /** Confirmado pelo dono em 17/11: mesma área da Máxima. */
+  cidadesAtendidas: [
+    "Curitiba",
+    "São José dos Pinhais",
+    "Pinhais",
+    "Colombo",
+    "Araucária",
+    "Almirante Tamandaré",
+    "Fazenda Rio Grande",
+    "Campo Largo",
+  ] as string[],
+  atende24h: true as boolean | null, // confirmado pelo dono (17/11): 24h, 7 dias
+  horario: "24 horas, todos os dias" as string | null,
   endereco: null as null | { rua: string; bairro: string; cidade: string; uf: string; cep: string },
   cnpj: null as string | null,
   redes: { instagram: null as string | null, facebook: null as string | null },
