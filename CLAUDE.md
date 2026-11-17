@@ -28,7 +28,7 @@ Projeto **separado** de qualquer outro (não tem nada a ver com o Barberos OS). 
 - Next.js 16 (App Router), React 19, Tailwind 4, GSAP + @gsap/react, Playwright. Ler `node_modules/next/dist/docs/` antes de usar uma API do Next (metadata, sitemap, robots, ícones, imagens).
 
 ## Fluxo de trabalho
-- **Primeiro só no localhost** (`npm run dev` → http://localhost:3000). Publicar só quando o Gustavo pedir.
+- **Primeiro só no localhost** (`npm run dev` → http://localhost:3200). Porta 3200 de propósito: a 3000 tem o service worker do Barberos preso no navegador do Gustavo e mostra "Sem internet". Publicar só quando o Gustavo pedir.
 - A publicação ainda não está definida. Opções: a VPS Hostinger que já roda outros sites dele, ou um build estático (`output: 'export'`) no GitHub Pages, como o site Máxima. Perguntar antes de publicar.
 - Ciclo obrigatório: construir → screenshots com Playwright (320, 360, 375, 390, 414, 430, 768, 1024, 1440, 1920) → olhar cada print → corrigir → repetir pelo menos 2 vezes. Lighthouse (performance, SEO, acessibilidade) antes de dizer que está pronto. Nunca inventar resultado de teste.
 - Git: repo privado `guaaparecido980-alt/monaliza-desentupidora`. Antes de commitar, conferir que não vai nenhum `.env*` nem segredo. Commits pequenos, em português.

@@ -8,7 +8,7 @@ Site institucional novo da Monaliza Desentupidora (Next.js 16 + Tailwind 4 + GSA
 3. O Claude já encontra as skills em `.claude/skills/`, as regras no `CLAUDE.md`, os dados em `docs/` e a logo em `marca/`.
 
 ## Rodar
-- `npm run dev` → http://localhost:3000
+- `npm run dev` → http://localhost:3200
 - `npx playwright install chromium` (uma vez) e depois `npx playwright test`
 
 ## Pastas
