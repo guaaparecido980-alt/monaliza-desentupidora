@@ -4,3 +4,4 @@ Phase 3 reads this before emitting any DNA: a new DNA matching any row on **2+ o
 
 | date | project | layout_skeleton | hero_composition | palette family | display font | signature |
 |---|---|---|---|---|---|---|
+| 2026-11-17 | Monaliza Desentupidora | coluna de anotação + conteúdo assimétrico, faixas escuro/claro (subsolo/superfície) | texto à esquerda + corte técnico de solo animado (SVG) | marinho/azul-água da logo + âmbar de sinalização | Barlow Condensed | planta hidráulica / linha d'água |
