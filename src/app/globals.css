@@ -1,26 +1,393 @@
 @import "tailwindcss";
 
+/* ───────── Tokens (ver docs/DESIGN.md) ───────── */
+@theme {
+  --color-abismo: #0b1a2b;
+  --color-abismo-2: #10243a;
+  --color-marinho: #1f3d63;
+  --color-marinho-logo: #2f4f7a;
+  --color-agua: #6fb0d2;
+  --color-nevoa: #a9bbcc;
+  --color-gelo: #f1f4f7;
+  --color-papel: #ffffff;
+  --color-grafite: #18202a;
+  --color-aco: #536273;
+  --color-sinal: #f2b33d;
+  --color-linha: #d5dde5;
+  --color-linha-escura: #24384f;
+
+  --font-display: var(--font-barlow), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-plex), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --breakpoint-xs: 30rem;
+  --ease-agua: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --chanfro: 14px;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --max: 82rem;
+  --barra-mobile: 0px;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@media (min-width: 1800px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --max: 90rem;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --barra-mobile: calc(64px + env(safe-area-inset-bottom));
   }
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5.5rem;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-gelo);
+  color: var(--color-grafite);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-agua);
+  color: var(--color-abismo);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-sinal);
+  outline-offset: 3px;
+}
+
+@layer components {
+/* ───────── Tipografia ───────── */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.005em;
+  font-size: clamp(3rem, 10.5vw, 6.9rem);
+}
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.95;
+  font-size: clamp(2.2rem, 5.5vw, 4.25rem);
+  text-wrap: balance;
+}
+.h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+}
+.lead {
+  font-size: clamp(1.075rem, 1.6vw, 1.25rem);
+  line-height: 1.6;
+}
+.texto-corrido p + p {
+  margin-top: 1em;
+}
+
+/* Anotação técnica (cota de planta) */
+.anot {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.anot::before {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+/* ───────── Layout ───────── */
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.subsolo {
+  background: var(--color-abismo);
+  color: var(--color-gelo);
+}
+
+/* Fundo de grade técnica (papel milimetrado discreto) */
+.grade {
+  background-image:
+    linear-gradient(to right, rgb(111 176 210 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(111 176 210 / 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.grade-clara {
+  background-image:
+    linear-gradient(to right, rgb(31 61 99 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(31 61 99 / 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Faixa de alvenaria (vem da logo) */
+.alvenaria {
+  height: 22px;
+  background-image:
+    linear-gradient(to bottom, transparent 10px, var(--alv-junta, var(--color-gelo)) 10px, var(--alv-junta, var(--color-gelo)) 12px, transparent 12px),
+    repeating-linear-gradient(to right, var(--alv-cor, var(--color-marinho)) 0 40px, var(--alv-junta, var(--color-gelo)) 40px 43px),
+    repeating-linear-gradient(to right, var(--alv-cor, var(--color-marinho)) 0 40px, var(--alv-junta, var(--color-gelo)) 40px 43px);
+  background-size: 100% 100%, 100% 10px, 100% 10px;
+  background-position: 0 0, 0 0, 21px 12px;
+  background-repeat: no-repeat, repeat-x, repeat-x;
+}
+
+/* Chanfro (canto do hexágono da logo) */
+.chanfro {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--chanfro)), calc(100% - var(--chanfro)) 100%, 0 100%);
+}
+.chanfro-duplo {
+  clip-path: polygon(var(--chanfro) 0, 100% 0, 100% calc(100% - var(--chanfro)), calc(100% - var(--chanfro)) 100%, 0 100%, 0 var(--chanfro));
+}
+
+/* Prancha: moldura com marcas de corte nos cantos */
+.prancha {
+  position: relative;
+}
+.prancha::before,
+.prancha::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: currentColor;
+  opacity: 0.55;
+  pointer-events: none;
+}
+.prancha::before {
+  top: -7px;
+  left: -7px;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+}
+.prancha::after {
+  bottom: -7px;
+  right: -7px;
+  border-bottom: 1.5px solid;
+  border-right: 1.5px solid;
+}
+
+/* ───────── Botões ───────── */
+.btn {
+  --btn-bg: var(--color-marinho);
+  --btn-fg: #fff;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 52px;
+  padding: 0.85rem 1.4rem 0.85rem 1.35rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+  transition: background-color 0.25s, color 0.25s;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn .seta {
+  transition: transform 0.35s var(--ease-agua);
+}
+.btn:hover .seta,
+.btn:focus-visible .seta {
+  transform: translateX(4px);
+}
+.btn-agua {
+  --btn-bg: var(--color-agua);
+  --btn-fg: var(--color-abismo);
+}
+.btn-agua:hover {
+  --btn-bg: #8cc3df;
+}
+.btn-marinho:hover {
+  --btn-bg: #17304f;
+}
+.btn-linha {
+  --btn-bg: transparent;
+  --btn-fg: currentColor;
+  clip-path: none;
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+.btn-linha:hover {
+  --btn-bg: rgb(127 127 127 / 0.12);
+}
+
+.link-sub {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.35s var(--ease-agua);
+}
+.link-sub:hover,
+.link-sub:focus-visible {
+  background-size: 100% 1.5px;
+}
+
+/* ───────── Ilustrações técnicas ───────── */
+.ilustra {
+  --traco: currentColor;
+}
+.ilustra .t {
+  fill: none;
+  stroke: var(--traco);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.ilustra .t2 {
+  fill: none;
+  stroke: var(--traco);
+  stroke-width: 1;
+  opacity: 0.45;
+  stroke-dasharray: 3 4;
+  vector-effect: non-scaling-stroke;
+}
+.ilustra .agua {
+  fill: none;
+  stroke: var(--color-agua);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+.ilustra .sinal {
+  fill: var(--color-sinal);
+}
+.ilustra .cota {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  fill: currentColor;
+  opacity: 0.75;
+}
+
+.corte-hero .cota {
+  font-size: 11px;
+}
+@media (max-width: 767px) {
+  .corte-hero .cota {
+    font-size: 12.5px;
+  }
+}
+.ilustra [data-fluxo] {
+  stroke-dasharray: 10 14;
+  animation: fluxo 1.4s linear infinite;
+}
+@keyframes fluxo {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+/* FAQ nativo */
+details.faq > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details.faq > summary::-webkit-details-marker {
+  display: none;
+}
+details.faq[open] .faq-sinal {
+  transform: rotate(45deg);
+}
+.faq-sinal {
+  transition: transform 0.3s var(--ease-agua);
+}
+
+/* Formulário */
+.campo {
+  width: 100%;
+  min-height: 52px;
+  padding: 0.8rem 1rem;
+  background: #fff;
+  border: 1.5px solid var(--color-linha);
+  color: var(--color-grafite);
+  font: inherit;
+  border-radius: 0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.campo:hover {
+  border-color: #b5c2cf;
+}
+.campo:focus {
+  outline: none;
+  border-color: var(--color-marinho);
+  box-shadow: 0 0 0 3px rgb(31 61 99 / 0.18);
+}
+.campo[aria-invalid="true"] {
+  border-color: #b3261e;
+}
+select.campo {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none' stroke='%231f3d63' stroke-width='2'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.75rem;
+}
+
+}
+
+/* ───────── Movimento ─────────
+   O conteúdo está sempre no HTML. Com JS + movimento permitido, a classe .mov
+   (posta por script inline no <head>) deixa os elementos [data-revela] prontos para
+   o GSAP. Se o GSAP não rodar em 3s, uma animação CSS mostra tudo mesmo assim. */
+@media (prefers-reduced-motion: no-preference) {
+  .mov:not(.gsap-ok) [data-revela] {
+    opacity: 0;
+    animation: revela-seguranca 0.01s 3s forwards;
+  }
+}
+@keyframes revela-seguranca {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
