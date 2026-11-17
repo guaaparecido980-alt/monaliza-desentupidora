@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#050B14" />
+<meta name="description" content="Política de Privacidade da Máxima Desentupidora Encanadores em conformidade com a LGPD. Saiba como tratamos seus dados pessoais ao usar nosso site." />
+<link rel="canonical" href="https://maximadesentupidoradias.com/politica-de-privacidade.html" />
+<title>Política de Privacidade | Máxima Desentupidora Encanadores</title>
+
+<!-- Google Analytics 4 (com Consent Mode + LGPD) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2RHKSPT71W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied', 'ad_user_data': 'denied',
+    'ad_personalization': 'denied', 'analytics_storage': 'denied'
+  });
+  try {
+    var saved = JSON.parse(localStorage.getItem('maxima_cookie_consent') || 'null');
+    if (saved && saved.consent) {
+      gtag('consent', 'update', {
+        'analytics_storage': saved.consent.analytics ? 'granted' : 'denied',
+        'ad_storage': saved.consent.marketing ? 'granted' : 'denied'
+      });
+    }
+  } catch (e) {}
+  gtag('js', new Date());
+  gtag('config', 'G-2RHKSPT71W', { 'anonymize_ip': true });
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56KJSBRW');</script>
+
+<!-- Favicons (mesmos do index) -->
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --c-ink: #050B14;
+  --c-blue: #1E6FD9;
+  --c-blue-deep: #0A2540;
+  --c-yellow: #FFD400;
+  --c-wa: #25D366;
+  --c-muted: #6B7A90;
+  --c-muted-dark: #475569;
+  --c-cream: #F7F9FC;
+  --c-line: rgba(10,37,64,.08);
+  --c-line-dark: rgba(10,37,64,.12);
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --font-display: 'Manrope', system-ui, sans-serif;
+  --font-body: 'Inter Tight', system-ui, sans-serif;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--c-ink);
+  background: #fff;
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: var(--c-blue); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Container */
+.container {
+  width: min(820px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+/* Header simples com voltar */
+.policy-header {
+  background: var(--c-ink);
+  color: #fff;
+  padding: 1.2rem 0;
+  border-bottom: 3px solid var(--c-yellow);
+}
+.policy-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.policy-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+.policy-header__brand:hover { text-decoration: none; color: var(--c-yellow); }
+.policy-header__logo {
+  width: 40px; height: 40px;
+  background: #fff;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(30, 111, 217, .25);
+}
+.policy-header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.policy-header__brand-name { font-size: 1.15rem; line-height: 1; }
+.policy-header__brand-sub {
+  display: block;
+  font-size: .7rem;
+  font-weight: 500;
+  opacity: .7;
+  margin-top: 2px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.policy-header__back {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .6rem 1rem;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  color: #fff;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 600;
+  transition: background .2s;
+}
+.policy-header__back:hover {
+  background: rgba(255,212,0,.15);
+  border-color: rgba(255,212,0,.4);
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Hero da política - título introdutório */
+.policy-hero {
+  background: linear-gradient(135deg, var(--c-cream) 0%, #fff 100%);
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  border-bottom: 1px solid var(--c-line);
+}
+.policy-hero__kicker {
+  display: inline-block;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--c-blue);
+  margin-bottom: 1rem;
+}
+.policy-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 1.3rem + 1.8vw, 2.6rem);
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  color: var(--c-ink);
+  margin-bottom: 1rem;
+}
+.policy-hero__lead {
+  font-size: 1.08rem;
+  color: var(--c-muted-dark);
+  max-width: 62ch;
+}
+.policy-hero__meta {
+  margin-top: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  background: #fff;
+  border: 1px solid var(--c-line-dark);
+  border-radius: 999px;
+  font-size: .82rem;
+  color: var(--c-muted-dark);
+}
+.policy-hero__meta strong { color: var(--c-ink); }
+
+/* Conteúdo */
+.policy-main {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+.policy-toc {
+  padding: 1.3rem 1.5rem;
+  background: var(--c-cream);
+  border: 1px solid var(--c-line-dark);
+  border-radius: var(--r-md);
+  margin-bottom: 2.5rem;
+}
+.policy-toc h2 {
+  font-family: var(--font-display);
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--c-blue);
+  margin-bottom: .9rem;
+}
+.policy-toc ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: toc;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .35rem .8rem;
+}
+@media (min-width: 600px) {
+  .policy-toc ol { grid-template-columns: 1fr 1fr; }
+}
+.policy-toc ol li {
+  counter-increment: toc;
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: .92rem;
+}
+.policy-toc ol li::before {
+  content: counter(toc, decimal-leading-zero);
+  position: absolute;
+  left: 0; top: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .72rem;
+  color: var(--c-blue);
+  letter-spacing: .03em;
+}
+.policy-toc a { color: var(--c-ink); font-weight: 500; }
+.policy-toc a:hover { color: var(--c-blue); }
+
+/* Seções do conteúdo */
+.policy-section {
+  margin-bottom: 2.6rem;
+  scroll-margin-top: 100px;
+}
+.policy-section h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.3rem, 1rem + 1vw, 1.6rem);
+  color: var(--c-ink);
+  margin-bottom: .9rem;
+  padding-bottom: .7rem;
+  border-bottom: 2px solid var(--c-yellow);
+  display: inline-block;
+}
+.policy-section h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--c-ink);
+  margin-top: 1.4rem;
+  margin-bottom: .6rem;
+}
+.policy-section p {
+  margin-bottom: 1rem;
+  color: #2a3547;
+}
+.policy-section p strong { color: var(--c-ink); font-weight: 600; }
+
+.policy-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+.policy-section ul li {
+  position: relative;
+  padding: .3rem 0 .3rem 1.6rem;
+  color: #2a3547;
+}
+.policy-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: .75rem;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--c-blue);
+}
+.policy-section ul li strong { color: var(--c-ink); }
+
+/* Tabela de base legal - compact e legível */
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  font-size: .92rem;
+  border: 1px solid var(--c-line-dark);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.policy-table th {
+  background: var(--c-cream);
+  text-align: left;
+  padding: .8rem 1rem;
+  font-family: var(--font-display);
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--c-blue-deep);
+  border-bottom: 1px solid var(--c-line-dark);
+}
+.policy-table td {
+  padding: .85rem 1rem;
+  border-bottom: 1px solid var(--c-line);
+  vertical-align: top;
+  color: #2a3547;
+}
+.policy-table tr:last-child td { border-bottom: none; }
+.policy-table td:first-child { font-weight: 600; color: var(--c-ink); }
+
+/* Callouts - destaques importantes */
+.policy-callout {
+  margin: 1.4rem 0;
+  padding: 1.2rem 1.4rem;
+  background: linear-gradient(135deg, rgba(255,212,0,.08) 0%, rgba(30,111,217,.04) 100%);
+  border-left: 4px solid var(--c-yellow);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+}
+.policy-callout strong { color: var(--c-ink); }
+
+.policy-callout--contact {
+  background: linear-gradient(135deg, rgba(37, 211, 102, .06) 0%, rgba(30,111,217,.04) 100%);
+  border-left-color: var(--c-wa);
+}
+
+/* Footer */
+.policy-footer {
+  background: var(--c-ink);
+  color: rgba(255,255,255,.7);
+  padding: 2.5rem 0 2rem;
+  margin-top: 2rem;
+  font-size: .9rem;
+}
+.policy-footer a { color: var(--c-yellow); }
+.policy-footer__top {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  margin-bottom: 1.5rem;
+}
+.policy-footer h3 {
+  font-family: var(--font-display);
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: .7rem;
+}
+.policy-footer__contacts p { margin-bottom: .3rem; }
+.policy-footer__bottom {
+  font-size: .82rem;
+  color: rgba(255,255,255,.5);
+  text-align: center;
+}
+
+/* Crédito do desenvolvedor */
+.policy-footer__developer {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,.04);
+  text-align: center;
+}
+.policy-footer__developer a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--font-display);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.32);
+  text-decoration: none;
+  transition: color .25s ease, transform .25s ease;
+}
+.policy-footer__developer a strong {
+  color: rgba(255,255,255,.55);
+  font-weight: 700;
+  transition: color .25s ease;
+}
+.policy-footer__developer a span {
+  color: #F5A623;
+  font-size: .85rem;
+  transition: transform .4s ease;
+}
+.policy-footer__developer a:hover {
+  color: #F5A623;
+  transform: translateY(-1px);
+}
+.policy-footer__developer a:hover strong { color: #F5A623; }
+.policy-footer__developer a:hover span { transform: rotate(180deg); }
+
+/* Links destacados */
+.policy-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .6rem 1rem;
+  background: var(--c-wa);
+  color: #04321B;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .9rem;
+  margin-top: .6rem;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, .25);
+  transition: transform .2s, box-shadow .25s;
+}
+.policy-link-btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: #04321B;
+  box-shadow: 0 8px 18px rgba(37, 211, 102, .35);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .policy-header__inner { flex-direction: column; align-items: flex-start; }
+  .policy-header__back { align-self: flex-start; }
+  .policy-table { font-size: .85rem; }
+  .policy-table th, .policy-table td { padding: .6rem .7rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56KJSBRW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- HEADER - com link de volta ao site -->
+<header class="policy-header">
+  <div class="container policy-header__inner">
+    <a href="/" class="policy-header__brand">
+      <span class="policy-header__logo" aria-hidden="true">
+        <img src="logo-card-white.png" alt="Logo Máxima" width="40" height="40" />
+      </span>
+      <span>
+        <span class="policy-header__brand-name">Máxima</span>
+        <span class="policy-header__brand-sub">Desentupidora & Encanadores</span>
+      </span>
+    </a>
+    <a href="/" class="policy-header__back" aria-label="Voltar para o site">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M19 11H7.83l4.88-4.88L11 4.59 3.59 12 11 19.41l1.71-1.53L7.83 13H19z"/></svg>
+      Voltar para o site
+    </a>
+  </div>
+</header>
+
+<!-- HERO COM TÍTULO -->
+<section class="policy-hero">
+  <div class="container">
+    <span class="policy-hero__kicker">LGPD · Lei Geral de Proteção de Dados</span>
+    <h1>Política de Privacidade</h1>
+    <p class="policy-hero__lead">
+      Sua privacidade importa pra gente. Este documento explica, em linguagem clara, como a Máxima Desentupidora Encanadores coleta, usa e protege seus dados pessoais quando você usa nosso site ou entra em contato com a gente pelo WhatsApp ou telefone.
+    </p>
+    <p class="policy-hero__meta">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="currentColor" style="color: var(--c-blue);"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm.5 5h-1v6l5 3 .5-.9-4.5-2.6Z"/></svg>
+      <span>Última atualização: <strong>23 de abril de 2026</strong></span>
+    </p>
+  </div>
+</section>
+
+<!-- CONTEÚDO -->
+<main class="policy-main">
+  <div class="container">
+
+    <!-- ÍNDICE -->
+    <nav class="policy-toc" aria-label="Índice da política">
+      <h2>Índice</h2>
+      <ol>
+        <li><a href="#introducao">Introdução e compromisso</a></li>
+        <li><a href="#dados-coletados">Dados que coletamos</a></li>
+        <li><a href="#finalidade">Por que tratamos seus dados</a></li>
+        <li><a href="#compartilhamento">Com quem compartilhamos</a></li>
+        <li><a href="#cookies">Cookies e rastreamento</a></li>
+        <li><a href="#armazenamento">Armazenamento e segurança</a></li>
+        <li><a href="#direitos">Seus direitos como titular</a></li>
+        <li><a href="#transferencia">Transferência internacional</a></li>
+        <li><a href="#menores">Menores de idade</a></li>
+        <li><a href="#alteracoes">Alterações nesta política</a></li>
+        <li><a href="#contato">Como falar com a gente</a></li>
+        <li><a href="#vigencia">Data de vigência</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1. INTRODUÇÃO -->
+    <section class="policy-section" id="introducao">
+      <h2>1. Introdução e compromisso</h2>
+      <p>
+        A <strong>Máxima Desentupidora e Encanadores</strong> (CNPJ 43.705.402/0001-02), sediada em Curitiba/PR, atua prestando serviços de desentupimento, hidrojateamento, caça-vazamento e encanador em Curitiba e região metropolitana.
+      </p>
+      <p>
+        Esta Política de Privacidade explica como tratamos os seus dados pessoais quando você:
+      </p>
+      <ul>
+        <li>Visita o nosso site;</li>
+        <li>Entra em contato pelo <strong>WhatsApp</strong> ou telefone;</li>
+        <li>Nos envia um e-mail;</li>
+        <li>Solicita um orçamento ou contrata um serviço.</li>
+      </ul>
+      <p>
+        Nós nos comprometemos a tratar seus dados em conformidade com a <strong>Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais — LGPD)</strong> e com a legislação brasileira aplicável, com transparência, boa-fé e respeito à sua privacidade.
+      </p>
+      <div class="policy-callout">
+        <p style="margin: 0;"><strong>Em resumo:</strong> coletamos só o que é realmente necessário pra atender você, usamos seus dados apenas pra te prestar o serviço ou responder seu contato, e nunca vendemos suas informações pra terceiros.</p>
+      </div>
+    </section>
+
+    <!-- 2. DADOS COLETADOS -->
+    <section class="policy-section" id="dados-coletados">
+      <h2>2. Dados que coletamos</h2>
+      <p>Coletamos diferentes tipos de dados dependendo de como você interage com a gente:</p>
+
+      <h3>2.1. Dados que você nos fornece diretamente</h3>
+      <p>Quando você entra em contato conosco por WhatsApp, telefone ou e-mail:</p>
+      <ul>
+        <li><strong>Nome e sobrenome</strong> (quando você se identifica);</li>
+        <li><strong>Número de telefone / WhatsApp</strong>;</li>
+        <li><strong>Endereço de e-mail</strong> (se você optar por enviar);</li>
+        <li><strong>Endereço da ocorrência</strong> (bairro, rua — só o necessário pra enviar a equipe);</li>
+        <li><strong>Descrição do problema</strong> (informações sobre o entupimento ou vazamento);</li>
+        <li><strong>Fotos ou áudios</strong> enviados por você voluntariamente pelo WhatsApp, se for o caso.</li>
+      </ul>
+
+      <h3>2.2. Dados coletados automaticamente</h3>
+      <p>Quando você navega no nosso site, coletamos automaticamente algumas informações técnicas:</p>
+      <ul>
+        <li><strong>Endereço IP</strong> e localização aproximada (cidade/região);</li>
+        <li><strong>Tipo de dispositivo</strong> (celular, desktop, tablet);</li>
+        <li><strong>Navegador utilizado</strong> (Chrome, Safari, Firefox etc.);</li>
+        <li><strong>Sistema operacional</strong> (Android, iOS, Windows, macOS);</li>
+        <li><strong>Páginas visitadas</strong>, tempo de permanência e cliques realizados;</li>
+        <li><strong>Origem da visita</strong> (Google, rede social, link direto);</li>
+        <li><strong>Cookies</strong> e identificadores similares — veja a seção específica abaixo.</li>
+      </ul>
+
+      <h3>2.3. Dados que não coletamos</h3>
+      <p>Este site <strong>não tem cadastro, login, cartão de crédito, compra online nem formulário que exija CPF</strong>. Não coletamos:</p>
+      <ul>
+        <li>CPF, RG ou outros documentos de identificação;</li>
+        <li>Dados de cartão de crédito ou conta bancária;</li>
+        <li>Dados sensíveis (saúde, origem racial, religião, orientação sexual etc.);</li>
+        <li>Dados biométricos.</li>
+      </ul>
+      <p>O pagamento do serviço, quando contratado, é combinado diretamente com a equipe <strong>após a conclusão do trabalho</strong>, no local.</p>
+    </section>
+
+    <!-- 3. FINALIDADE E BASE LEGAL -->
+    <section class="policy-section" id="finalidade">
+      <h2>3. Por que tratamos seus dados</h2>
+      <p>Tratamos seus dados pessoais apenas para finalidades específicas e com base legal adequada, conforme exigido pela LGPD:</p>
+
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Finalidade</th>
+            <th>Base legal (LGPD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Atender seu contato e prestar o serviço solicitado</td>
+            <td>Execução de contrato (art. 7º, V)</td>
+          </tr>
+          <tr>
+            <td>Entrar em contato pra confirmar endereço, janela de chegada e orçamento</td>
+            <td>Execução de contrato (art. 7º, V)</td>
+          </tr>
+          <tr>
+            <td>Emitir nota fiscal do serviço</td>
+            <td>Cumprimento de obrigação legal (art. 7º, II)</td>
+          </tr>
+          <tr>
+            <td>Melhorar a experiência do site e analisar audiência</td>
+            <td>Legítimo interesse (art. 7º, IX)</td>
+          </tr>
+          <tr>
+            <td>Cookies não essenciais (analytics, marketing)</td>
+            <td>Consentimento (art. 7º, I)</td>
+          </tr>
+          <tr>
+            <td>Defender a empresa em processos judiciais ou administrativos</td>
+            <td>Exercício regular de direitos (art. 7º, VI)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Não fazemos perfilização, não tomamos decisões automatizadas sobre você e não usamos seus dados pra anúncios personalizados.</strong></p>
+    </section>
+
+    <!-- 4. COMPARTILHAMENTO -->
+    <section class="policy-section" id="compartilhamento">
+      <h2>4. Com quem compartilhamos seus dados</h2>
+      <p>Seus dados pessoais <strong>nunca são vendidos</strong>. Eles podem ser compartilhados apenas nos seguintes casos:</p>
+
+      <h3>4.1. Prestadores de serviço essenciais</h3>
+      <ul>
+        <li><strong>WhatsApp (Meta Platforms)</strong> — quando você se comunica com a gente via WhatsApp, a Meta processa essa comunicação conforme a política de privacidade do WhatsApp;</li>
+        <li><strong>Google</strong> — usamos o Google Analytics (ou equivalente) para entender como as pessoas usam nosso site. Os dados são agregados e anônimos;</li>
+        <li><strong>Provedor de hospedagem do site</strong> — armazena logs técnicos básicos (IP, horário de acesso);</li>
+        <li><strong>Equipe interna da Máxima</strong> — apenas profissionais autorizados têm acesso aos seus dados, estritamente para executar o serviço.</li>
+      </ul>
+
+      <h3>4.2. Autoridades públicas</h3>
+      <p>Podemos compartilhar dados com órgãos públicos (Polícia, Ministério Público, Receita Federal, Justiça) quando exigido por lei, ordem judicial ou requisição oficial.</p>
+
+      <h3>4.3. Em caso de sucessão empresarial</h3>
+      <p>Se a Máxima for adquirida, fundida ou tiver parte de suas operações transferidas, seus dados podem ser repassados ao sucessor, sempre sob a mesma proteção desta política.</p>
+    </section>
+
+    <!-- 5. COOKIES -->
+    <section class="policy-section" id="cookies">
+      <h2>5. Cookies e rastreamento</h2>
+      <p>Cookies são pequenos arquivos salvos no seu dispositivo quando você visita um site. Eles ajudam o site a lembrar informações sobre sua visita.</p>
+
+      <h3>5.1. Tipos de cookies que usamos</h3>
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Categoria</th>
+            <th>Finalidade</th>
+            <th>Exige consentimento?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Essenciais</td>
+            <td>Fazem o site funcionar (navegação, segurança, preferência de cookies). Sem eles o site não funciona.</td>
+            <td>Não — base legal é legítimo interesse.</td>
+          </tr>
+          <tr>
+            <td>Analíticos</td>
+            <td>Medem quantas pessoas visitam o site, quais páginas são mais acessadas e como elas chegam até nós. Usados em formato agregado.</td>
+            <td>Sim — só ativados se você aceitar.</td>
+          </tr>
+          <tr>
+            <td>Marketing</td>
+            <td>No momento <strong>não usamos cookies de marketing/publicidade</strong>. Caso passemos a usar no futuro, este documento será atualizado e você será avisado.</td>
+            <td>Sim — só se você aceitar.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>5.2. Como gerenciar seus cookies</h3>
+      <p>Quando você visita o site pela primeira vez, é exibido um banner de consentimento com três opções:</p>
+      <ul>
+        <li><strong>Aceitar todos</strong> — autoriza todos os cookies (incluindo analíticos);</li>
+        <li><strong>Rejeitar opcionais</strong> — bloqueia analíticos; só os essenciais são carregados;</li>
+        <li><strong>Preferências</strong> — você escolhe categoria por categoria.</li>
+      </ul>
+      <p>Você pode mudar sua escolha a qualquer momento clicando no link <strong>"Configurar cookies"</strong> que aparece no rodapé do site. Também pode apagar os cookies diretamente nas configurações do seu navegador.</p>
+    </section>
+
+    <!-- 6. ARMAZENAMENTO E SEGURANÇA -->
+    <section class="policy-section" id="armazenamento">
+      <h2>6. Armazenamento e segurança</h2>
+
+      <h3>6.1. Por quanto tempo guardamos seus dados</h3>
+      <ul>
+        <li><strong>Conversas pelo WhatsApp:</strong> até 12 meses após o último contato, para histórico de atendimento e garantia do serviço;</li>
+        <li><strong>Dados de atendimento e endereço:</strong> até 5 anos, para cumprir obrigações fiscais e de garantia do serviço;</li>
+        <li><strong>Notas fiscais e dados contábeis:</strong> pelo prazo legal (mínimo 5 anos, conforme Código Tributário Nacional);</li>
+        <li><strong>Logs de navegação do site:</strong> até 6 meses;</li>
+        <li><strong>Cookies:</strong> conforme o prazo específico de cada cookie (geralmente até 12 meses).</li>
+      </ul>
+      <p>Após esses prazos, os dados são anonimizados ou excluídos, exceto quando a retenção for necessária por obrigação legal ou exercício regular de direitos.</p>
+
+      <h3>6.2. Como protegemos seus dados</h3>
+      <p>Adotamos medidas técnicas e organizacionais razoáveis pra proteger seus dados contra acesso não autorizado, perda, alteração ou divulgação indevida:</p>
+      <ul>
+        <li>Site servido via <strong>HTTPS</strong> (conexão criptografada);</li>
+        <li>Acesso restrito aos dados: somente profissionais autorizados da Máxima;</li>
+        <li>Comunicação via WhatsApp, que já oferece criptografia ponta-a-ponta;</li>
+        <li>Treinamento interno sobre LGPD e boas práticas de segurança;</li>
+        <li>Revisão periódica de acessos e permissões.</li>
+      </ul>
+      <p>Apesar de todos os cuidados, <strong>nenhum sistema é 100% invulnerável</strong>. Em caso de incidente de segurança que possa causar risco relevante aos titulares, comunicaremos você e a ANPD (Autoridade Nacional de Proteção de Dados) nos prazos previstos em lei.</p>
+    </section>
+
+    <!-- 7. DIREITOS DO TITULAR -->
+    <section class="policy-section" id="direitos">
+      <h2>7. Seus direitos como titular</h2>
+      <p>A LGPD garante a você uma série de direitos sobre seus dados pessoais. Você pode, a qualquer momento:</p>
+      <ul>
+        <li><strong>Confirmar</strong> se tratamos seus dados;</li>
+        <li><strong>Acessar</strong> os dados que temos sobre você;</li>
+        <li><strong>Corrigir</strong> dados incompletos, inexatos ou desatualizados;</li>
+        <li><strong>Anonimizar, bloquear ou excluir</strong> dados desnecessários ou tratados em desconformidade com a lei;</li>
+        <li><strong>Portabilidade</strong> dos dados pra outro fornecedor de serviço, quando aplicável;</li>
+        <li><strong>Eliminação</strong> dos dados tratados com base no seu consentimento;</li>
+        <li><strong>Informação</strong> sobre com quem compartilhamos seus dados;</li>
+        <li><strong>Revogar o consentimento</strong> a qualquer momento, quando ele for a base legal do tratamento;</li>
+        <li><strong>Opor-se</strong> ao tratamento realizado com base em legítimo interesse;</li>
+        <li><strong>Reclamar à ANPD</strong> (Autoridade Nacional de Proteção de Dados) se entender que seus direitos foram violados.</li>
+      </ul>
+
+      <div class="policy-callout policy-callout--contact">
+        <p style="margin: 0;"><strong>Como exercer seus direitos:</strong> envie um e-mail pra <a href="mailto:geomercindo122@gmail.com">geomercindo122@gmail.com</a> ou fale com a gente pelo WhatsApp <a href="https://wa.me/5541995996771?text=Ol%C3%A1%2C%20gostaria%20de%20exercer%20um%20direito%20LGPD.">(41) 99599-6771</a> com o assunto <em>"LGPD — Titular de dados"</em>. Respondemos em até 15 dias.</p>
+      </div>
+    </section>
+
+    <!-- 8. TRANSFERÊNCIA INTERNACIONAL -->
+    <section class="policy-section" id="transferencia">
+      <h2>8. Transferência internacional de dados</h2>
+      <p>Alguns dos serviços que usamos (como WhatsApp/Meta e Google Analytics) podem processar seus dados em servidores fora do Brasil, incluindo Estados Unidos e outros países.</p>
+      <p>Essas transferências acontecem apenas com fornecedores que oferecem garantias de proteção compatíveis com a LGPD, com base nas exceções previstas no art. 33 da lei (transferência necessária pra execução de contrato com o titular ou com cláusulas contratuais padrão de proteção).</p>
+    </section>
+
+    <!-- 9. MENORES -->
+    <section class="policy-section" id="menores">
+      <h2>9. Menores de idade</h2>
+      <p>Nosso site e nossos serviços são destinados a <strong>maiores de 18 anos</strong>, responsáveis por imóveis ou contratação de serviços técnicos.</p>
+      <p>Não coletamos intencionalmente dados de crianças e adolescentes. Se você for responsável por um menor e acreditar que ele entrou em contato conosco sem sua autorização, fale com a gente e excluiremos os dados imediatamente.</p>
+    </section>
+
+    <!-- 10. ALTERAÇÕES -->
+    <section class="policy-section" id="alteracoes">
+      <h2>10. Alterações nesta política</h2>
+      <p>Podemos atualizar esta Política de Privacidade quando houver mudanças nos nossos serviços, na legislação aplicável ou nas ferramentas que usamos.</p>
+      <p>Mudanças relevantes serão comunicadas através de aviso em destaque no site. A <strong>data da última atualização</strong> aparece sempre no topo deste documento. Recomendamos que você revise a política periodicamente.</p>
+    </section>
+
+    <!-- 11. CONTATO -->
+    <section class="policy-section" id="contato">
+      <h2>11. Como falar com a gente</h2>
+      <p>Pra qualquer dúvida sobre esta política, sobre o tratamento dos seus dados ou pra exercer seus direitos, use os canais abaixo:</p>
+      <ul>
+        <li><strong>Razão social:</strong> Máxima Desentupidora e Encanadores</li>
+        <li><strong>CNPJ:</strong> 43.705.402/0001-02</li>
+        <li><strong>E-mail:</strong> <a href="mailto:geomercindo122@gmail.com">geomercindo122@gmail.com</a></li>
+        <li><strong>WhatsApp / Telefone:</strong> <a href="https://wa.me/5541995996771">(41) 99599-6771</a></li>
+        <li><strong>Endereço:</strong> Curitiba — PR</li>
+      </ul>
+      <p>Por sermos uma empresa de pequeno porte com operação local, não temos um Encarregado de Proteção de Dados (DPO) formalmente designado. Todas as demandas de LGPD são atendidas diretamente pelo responsável da empresa através dos canais acima.</p>
+      <a href="https://wa.me/5541995996771?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20a%20pol%C3%ADtica%20de%20privacidade." class="policy-link-btn">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.15 1.6 5.95L2 22l4.25-1.11a9.9 9.9 0 0 0 5.79 1.84h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2Zm5.83 14.12c-.25.7-1.44 1.33-2.02 1.42-.52.08-1.17.12-1.89-.12-.44-.14-1-.33-1.72-.64-3.03-1.31-5-4.36-5.15-4.56-.15-.2-1.23-1.63-1.23-3.11 0-1.48.78-2.21 1.05-2.51.28-.3.6-.38.8-.38l.58.01c.19 0 .44-.07.69.53.25.62.86 2.1.94 2.25.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.17-.32.39-.45.52-.15.15-.31.31-.13.61.17.3.78 1.29 1.68 2.09 1.15 1.03 2.13 1.35 2.43 1.5.3.15.47.12.65-.07.17-.2.74-.87.94-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.14.08.78-.17 1.48Z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </section>
+
+    <!-- 12. VIGÊNCIA -->
+    <section class="policy-section" id="vigencia">
+      <h2>12. Data de vigência</h2>
+      <p>Esta Política de Privacidade entra em vigor na data da última atualização indicada no topo deste documento.</p>
+    </section>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="policy-footer">
+  <div class="container">
+    <div class="policy-footer__top">
+      <h3>Máxima Desentupidora Encanadores</h3>
+      <div class="policy-footer__contacts">
+        <p>CNPJ 43.705.402/0001-02 · Curitiba — PR</p>
+        <p>WhatsApp e telefone: <a href="https://wa.me/5541995996771">(41) 99599-6771</a></p>
+        <p>E-mail: <a href="mailto:geomercindo122@gmail.com">geomercindo122@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="policy-footer__bottom">
+      © 2026 Máxima Desentupidora Encanadores. Todos os direitos reservados.
+    </div>
+    <div class="policy-footer__developer">
+      <a href="https://gustavodigital.online" target="_blank" rel="noopener" title="Criação de sites profissionais por Gustavo Digital">
+        Site desenvolvido por <strong>Gustavo Digital</strong> <span aria-hidden="true">✦</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
