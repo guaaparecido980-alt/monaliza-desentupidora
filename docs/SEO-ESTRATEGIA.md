@@ -188,7 +188,16 @@ Feita com script próprio sobre https://monalizadesentupidora.com.br (todas as U
 
 ## 6. Performance
 
-Medição com Lighthouse 12 (simulação de celular, rede 4G lenta) **no endereço publicado**. Resultados na seção "Medições" de `docs/PENDENCIAS-E-PUBLICACAO.md`.
+Medição com Lighthouse 12 (simulação de celular, rede 4G lenta) **no endereço publicado**, 18/11/2026, 3 rodadas por página:
+
+| Página | Performance | Acessib. | Boas práticas | SEO | LCP | TBT | CLS |
+|---|---|---|---|---|---|---|---|
+| `/` (antes da correção) | 82–86 | 100 | 100 | 100 | 2,8–3,1 s | 390–420 ms | 0 |
+| `/` (depois) | 91–96 | 100 | 100 | 100 | 2,6–2,9 s | 80–110 ms | 0 |
+| `/servicos/desentupimento-de-esgoto` | 92–98 | 100 | 100 | 100 | 2,2–2,9 s | 70–150 ms | 0 |
+| `/contato` | 99 | 100 | 100 | 100 | 2,2 s | 30 ms | 0 |
+
+**Correção feita:** a preparação das animações media o comprimento de cada traço dos desenhos de uma vez (muitos desde que os desenhos passaram a aparecer no celular). Agora os traços usam `pathLength` (sem medição) e o trabalho é dividido em etapas curtas. LCP abaixo de 2,5 s (meta "bom") ainda não é constante na simulação; o maior elemento é texto, então o limite é a rede simulada, não imagem.
 
 O que já está otimizado:
 - **Sem imagens pesadas**: os desenhos são SVG no próprio HTML (sem download extra; o maior elemento da tela é texto).

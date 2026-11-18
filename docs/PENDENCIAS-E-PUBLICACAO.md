@@ -33,6 +33,9 @@ Tudo entra em **um arquivo só**: `src/config/empresa.ts`.
 - [ ] PageSpeed Insights (https://pagespeed.web.dev) no endereço real: dados de campo de LCP/INP/CLS.
 - [ ] Perfil da Empresa no Google com o mesmo nome, telefone e área de atendimento do site (NAP igual).
 
+## Medições no endereço publicado (18/11/2026)
+- Lighthouse celular no site real: home Performance 91–96 (TBT 80–110 ms), serviço 92–98, contato 99; Acessibilidade, Boas práticas e SEO 100 em todas; CLS 0. Detalhes em `docs/SEO-ESTRATEGIA.md`, seção 6.
+
 ## Resultados medidos nesta entrega (17/11/2026, máquina local, build de produção)
 - Playwright: 48 testes passando (desktop + celular Pixel 7), 2 pulados de propósito (testes só de celular no projeto desktop).
 - Screenshots: 8 páginas × 10 larguras (320 a 1920) sem rolagem horizontal e sem erro de console; também com movimento reduzido.
