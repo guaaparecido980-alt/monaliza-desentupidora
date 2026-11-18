@@ -1,5 +1,7 @@
 # Fase 1–3 · Pesquisa, serviços e palavras-chave
 
+> O mapa completo (intenção, prioridade, oportunidade, risco de canibalização) está em `docs/SEO-ESTRATEGIA.md`.
+
 Feita em 17/11/2026. Fontes no fim. **Nenhum volume de busca foi inventado**: não havia ferramenta de volume (Semrush/Keyword Planner) disponível nesta sessão. A coluna "volume" fica para preencher com o Planejador de Palavras-chave do Google Ads ou o Search Console depois que o site estiver no ar.
 
 ## 1. Mercado (Curitiba e região)

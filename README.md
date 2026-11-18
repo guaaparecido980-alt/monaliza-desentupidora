@@ -26,6 +26,8 @@ Site institucional da Monaliza Desentupidora (Curitiba/PR). Next.js 16 (App Rout
 - `docs/DESIGN.md` — Design DNA, paleta com contraste medido, tipografia, movimento
 - `docs/IMAGENS.md` — origem e licença de cada imagem
 - `docs/DADOS-DA-EMPRESA.md` — o que é confirmado e o que é pendente
+- `docs/SEO-ESTRATEGIA.md` — mapa de palavras-chave, arquitetura, SEO local, auditoria técnica, eventos, etapas (implementado/testado/monitorado)
+- `docs/SEARCH-CONSOLE.md` — como verificar, enviar sitemap, ler os relatórios e plano de crescimento
 - `docs/PENDENCIAS-E-PUBLICACAO.md` — o que falta o cliente passar, checklist de publicação e resultados dos testes
 
 ## Páginas
