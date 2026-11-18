@@ -13,7 +13,7 @@ export const empresa = {
    * PENDENTE: o dono vai passar o número. Enquanto for null, os botões de WhatsApp
    * levam para a página /contato (nada de número falso).
    */
-  whatsapp: null as string | null,
+  whatsapp: "5541996410946" as string | null, // confirmado pelo Gustavo (17/11)
   /** Somente dígitos com DDI. PENDENTE. */
   telefone: null as string | null,
   email: null as string | null,

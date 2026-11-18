@@ -146,7 +146,15 @@ test("formulário valida campos e mostra erros acessíveis", async ({ page }) =>
   await expect(page.locator('[aria-invalid="true"]')).toHaveCount(5);
 });
 
-test("formulário completo: abre o WhatsApp ou avisa honestamente que o canal não está pronto", async ({ page }) => {
+test("formulário completo monta a mensagem e abre o WhatsApp (ou avisa que não enviou)", async ({ page }) => {
+  // Captura o link que o formulário abriria, sem sair para a internet
+  await page.addInitScript(() => {
+    (window as unknown as { __aberto: string[] }).__aberto = [];
+    window.open = ((url?: string | URL) => {
+      (window as unknown as { __aberto: string[] }).__aberto.push(String(url));
+      return null;
+    }) as typeof window.open;
+  });
   await page.goto("/contato?servico=hidrojateamento");
   await expect(page.locator('select[name="servico"]')).toHaveValue("hidrojateamento");
   await page.locator('input[name="nome"]').fill("Maria Teste");
@@ -155,12 +163,13 @@ test("formulário completo: abre o WhatsApp ou avisa honestamente que o canal n�
   await page.locator('select[name="cidade"]').selectOption("Pinhais");
   await page.locator('textarea[name="descricao"]').fill("Cano da cozinha entupindo toda semana.");
   await page.waitForTimeout(2600); // tempo mínimo anti-spam
-  const popup = page.waitForEvent("popup", { timeout: 3000 }).catch(() => null);
   await page.getByRole("button", { name: /Enviar pelo WhatsApp/ }).click();
-  const janela = await popup;
-  if (janela) {
-    expect(janela.url()).toMatch(/wa\.me\/\d+\?text=/);
-    expect(decodeURIComponent(janela.url())).toContain("Hidrojateamento");
+  const abertos = await page.evaluate(() => (window as unknown as { __aberto: string[] }).__aberto);
+  if (abertos.length) {
+    expect(abertos[0]).toMatch(/^https:\/\/wa\.me\/55\d{10,11}\?text=/);
+    const texto = decodeURIComponent(abertos[0]);
+    for (const trecho of ["Maria Teste", "(41) 99999-8888", "Hidrojateamento", "Pinhais", "Cano da cozinha"]) expect(texto).toContain(trecho);
+    await expect(page.getByText("Abrimos o WhatsApp com a sua mensagem.")).toBeVisible();
   } else {
     // WhatsApp ainda não configurado em empresa.ts: o site precisa dizer que NÃO enviou
     await expect(page.getByText("Sua mensagem não foi enviada")).toBeVisible();
