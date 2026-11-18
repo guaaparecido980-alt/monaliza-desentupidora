@@ -88,7 +88,7 @@ export default function QuemSomos() {
           <ul className="mt-12 grid gap-px bg-linha md:grid-cols-2">
             {compromissos.map((c) => (
               <li key={c.t} className="relative bg-papel p-7 sm:p-9" data-revela>
-                <span className="absolute left-0 top-9 h-8 w-1.5 bg-sinal" aria-hidden="true" />
+                <span data-marcador className="absolute left-0 top-9 h-8 w-1.5 origin-top bg-sinal" aria-hidden="true" />
                 <h3 className="h3 text-marinho">{c.t}</h3>
                 <p className="mt-3 text-aco">{c.d}</p>
               </li>

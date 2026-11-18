@@ -114,7 +114,7 @@ export default function Inicio() {
                 <span className="font-mono text-[0.7rem] tracking-[0.12em] text-aco" aria-hidden="true">
                   {["A", "B", "C", "D"][i]}·
                 </span>
-                <span className="absolute right-6 top-7 h-6 w-1.5 bg-sinal" aria-hidden="true" />
+                <span data-marcador className="absolute right-6 top-7 h-6 w-1.5 origin-top bg-sinal" aria-hidden="true" />
                 <h3 className="h3 mt-3 pr-6 text-marinho">{d.titulo}</h3>
                 <p className="mt-3 text-[0.98rem] text-aco">{d.texto}</p>
               </li>
@@ -146,21 +146,28 @@ export default function Inicio() {
               <li key={s.slug} className="border-b border-linha">
                 <Link
                   href={`/servicos/${s.slug}`}
-                  className="group grid grid-cols-[1fr_auto] items-center gap-x-5 gap-y-2 py-6 [--fundo-ilustra:var(--color-papel)] sm:grid-cols-[4.5rem_1fr_7rem_auto] md:py-7 lg:grid-cols-[5rem_minmax(0,1.1fr)_minmax(0,1fr)_9rem_auto]"
+                  data-ativa-no-centro
+                  className="group grid grid-cols-[1fr_6.5rem] items-center gap-x-4 gap-y-2 py-6 [--fundo-ilustra:var(--color-papel)] sm:grid-cols-[4.5rem_1fr_7rem_auto] sm:gap-x-5 md:py-7 lg:grid-cols-[5rem_minmax(0,1.1fr)_minmax(0,1fr)_9rem_auto]"
                 >
                   <span className="hidden font-mono text-[0.72rem] tracking-[0.12em] text-aco sm:block">
                     P-{String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="font-display text-[clamp(1.75rem,4vw,2.9rem)] font-bold uppercase leading-none text-marinho transition-colors group-hover:text-marinho-logo">
+                  <span className="font-display text-[clamp(1.75rem,4vw,2.9rem)] font-bold uppercase leading-none text-marinho transition-colors duration-300 group-hover:text-marinho-logo group-[.ativo]:text-marinho-logo">
                     {s.nome}
                   </span>
-                  <span className="col-span-2 row-start-2 text-[0.95rem] text-aco sm:col-span-1 sm:col-start-2 lg:col-start-3 lg:row-start-1">
+                  <span className="row-start-2 text-[0.95rem] text-aco sm:col-start-2 lg:col-start-3 lg:row-start-1">
                     {s.problema}
+                    <span className="mt-2 flex items-center gap-2 font-semibold text-marinho sm:hidden">
+                      Ver serviço <Seta className="transition-transform duration-300 group-[.ativo]:translate-x-1" />
+                    </span>
                   </span>
-                  <span className="hidden text-marinho-logo sm:col-start-3 sm:row-span-2 sm:row-start-1 sm:block lg:col-start-4 lg:row-span-1">
-                    <IlustracaoServico chave={s.ilustracao} className="w-full opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+                  <span className="col-start-2 row-span-2 row-start-1 text-marinho-logo sm:col-start-3 lg:col-start-4 lg:row-span-1">
+                    <IlustracaoServico
+                      chave={s.ilustracao}
+                      className="w-full opacity-60 transition-opacity duration-300 group-hover:opacity-100 group-[.ativo]:opacity-100"
+                    />
                   </span>
-                  <span className="col-start-2 row-start-1 grid size-11 place-items-center border border-linha text-marinho transition-colors group-hover:border-marinho group-hover:bg-marinho group-hover:text-white sm:col-start-4 lg:col-start-5">
+                  <span className="hidden size-11 place-items-center border border-linha text-marinho transition-colors group-hover:border-marinho group-hover:bg-marinho group-hover:text-white sm:col-start-4 sm:row-start-1 sm:grid lg:col-start-5">
                     <Seta />
                   </span>
                 </Link>

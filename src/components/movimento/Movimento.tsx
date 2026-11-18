@@ -92,6 +92,15 @@ export function Movimento() {
             );
           });
 
+          // Marcadores âmbar dos cards crescem quando o card entra na tela
+          gsap.utils.toArray<HTMLElement>("[data-marcador]").forEach((el) => {
+            gsap.fromTo(
+              el,
+              { scaleY: 0 },
+              { scaleY: 1, duration: 0.7, ease: "expo.out", delay: 0.25, scrollTrigger: { trigger: el, start: "top 88%", once: true } },
+            );
+          });
+
           gsap.utils.toArray<HTMLElement>("[data-paralaxe]").forEach((el) => {
             const forca = Number(el.dataset.paralaxe || 10);
             gsap.fromTo(
@@ -103,6 +112,14 @@ export function Movimento() {
 
           ScrollTrigger.refresh();
           return () => html.classList.remove("gsap-ok");
+        });
+
+        // Celular (sem mouse): a linha de serviço que está no meio da tela "acende",
+        // fazendo o papel do efeito de passar o mouse do desktop.
+        mm.add("(hover: none), (max-width: 767px)", () => {
+          gsap.utils.toArray<HTMLElement>("[data-ativa-no-centro]").forEach((el) => {
+            ScrollTrigger.create({ trigger: el, start: "top 62%", end: "bottom 38%", toggleClass: "ativo" });
+          });
         });
       });
     };

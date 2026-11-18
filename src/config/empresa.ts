@@ -15,7 +15,7 @@ export const empresa = {
    */
   whatsapp: "5541996410946" as string | null, // confirmado pelo Gustavo (17/11)
   /** Somente dígitos com DDI. PENDENTE. */
-  telefone: null as string | null,
+  telefone: "5541996410946" as string | null, // mesmo número do WhatsApp (confirmado 17/11)
   email: null as string | null,
   /** Domínio de produção, sem barra no fim. Também pode vir de NEXT_PUBLIC_SITE_URL. */
   dominio: "https://monalizadesentupidora.com.br" as string | null, // comprado na Hostinger (17/11)
