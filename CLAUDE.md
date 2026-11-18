@@ -35,6 +35,6 @@ Projeto **separado** de qualquer outro (não tem nada a ver com o Barberos OS). 
 
 ## Comandos
 - `npm run dev`: servidor local.
-- `npm run build && npm start`: teste de produção.
+- `npm run build` gera `out/`; `npx serve out -l 3201` para testar igual ao GitHub Pages.
 - `npx playwright test`: testes (configurar em `playwright.config.ts` / `tests/`).
 - `npx playwright install chromium` na primeira vez.
