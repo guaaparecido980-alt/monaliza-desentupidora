@@ -7,7 +7,7 @@ Tudo entra em **um arquivo só**: `src/config/empresa.ts`.
 |---|---|---|
 | WhatsApp (número completo, com DDI e DDD, só dígitos: `5541999999999`) | `whatsapp` | Todos os botões passam a abrir o WhatsApp com mensagem pronta (por serviço). O formulário passa a enviar. Aparece o botão flutuante no desktop |
 | Telefone para ligar | `telefone` | Aparece o botão "Ligar" na barra do celular, no rodapé e no contato. Entra no schema (`telephone`) |
-| Domínio | `dominio` (ou variável `NEXT_PUBLIC_SITE_URL`) | Canonical, sitemap, robots e Open Graph passam a usar o endereço real. **Obrigatório antes de publicar** |
+| ~~Domínio~~ | `dominio` | ✅ `monalizadesentupidora.com.br` (comprado na Hostinger, 17/11) |
 | "Desde 1996" é real? | `fundacao: 1996` | Entra no schema (`foundingDate`). Hoje só aparece dentro da logo |
 | E-mail, Instagram, Facebook | `email`, `redes` | Aparecem no rodapé/contato e no schema (`sameAs`) |
 | Endereço público (se houver) | `endereco` | Aparece no contato e no schema. Sem endereço, o site trata como atendimento no local do cliente |
@@ -18,10 +18,13 @@ Tudo entra em **um arquivo só**: `src/config/empresa.ts`.
 | Bairros atendidos / casos por cidade | — | Permite criar páginas `/regioes/[cidade]` com conteúdo próprio (hoje não existem de propósito) |
 
 ## Checklist antes de publicar
-- [ ] WhatsApp e domínio preenchidos em `empresa.ts`.
+- [x] Domínio preenchido em `empresa.ts` e em `public/CNAME`.
+- [ ] WhatsApp preenchido em `empresa.ts`.
 - [ ] `npm run build` sem erro e `npx playwright test` passando.
 - [ ] Rodar o teste do formulário e conferir que abre o WhatsApp certo.
-- [ ] Decidir hospedagem: VPS Hostinger (`npm run build && npm start` atrás do Nginx, com HTTPS) **ou** build estático. O site inteiro já é estático (`ensureStatic = "navigation"`); para GitHub Pages é preciso testar `output: "export"` (as imagens geradas por código — ícone Apple e Open Graph — viram arquivos no build).
+- [x] Hospedagem: **GitHub Pages** (decidido em 17/11), igual à Máxima. `npm run build` gera `out/` (com `CNAME` e `.nojekyll`); o script `scripts/pos-export.mjs` ajusta os arquivos de navegação para hospedagem estática.
+- [ ] DNS na Hostinger (hPanel → Domínios → monalizadesentupidora.com.br → DNS): apagar A `@` e CNAME `www` antigos; criar A `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` e CNAME `www` → `guaaparecido980-alt.github.io`.
+- [ ] No GitHub (Settings → Pages): domínio `monalizadesentupidora.com.br` e "Enforce HTTPS" ligado (o certificado sai depois que o DNS propagar).
 - [ ] HTTPS ativo e redirecionamento de `www` ↔ sem `www` (escolher um).
 - [ ] Google Search Console: criar propriedade, colocar o código em `NEXT_PUBLIC_GSC_VERIFICATION`, enviar `/sitemap.xml`.
 - [ ] GA4 (opcional): colocar o ID em `NEXT_PUBLIC_GA_ID`. O aviso de cookies aparece sozinho; eventos já prontos: `whatsapp_click`, `telefone_click`, `cta_contato`, `formulario_envio` (com o serviço e o local do clique).

@@ -1,11 +1,12 @@
 # Monaliza Desentupidora — site
 
-Site institucional da Monaliza Desentupidora (Curitiba/PR). Next.js 16 (App Router, tudo estático) + React 19 + Tailwind 4 + GSAP + Playwright.
+Site institucional da Monaliza Desentupidora (Curitiba/PR). Next.js 16 (App Router, exportação estática para o GitHub Pages) + React 19 + Tailwind 4 + GSAP + Playwright.
 
 ## Rodar
 - `npm run dev` → http://localhost:3200 (desenvolvimento)
-- `npm run build && npx next start -p 3201` → teste de produção em http://localhost:3201
-- `npx playwright test` → testes automáticos (sobe o servidor de produção sozinho; rode `npm run build` antes)
+- `npm run build` → gera o site estático na pasta `out/` (é isso que vai para o GitHub Pages)
+- `npx serve out -l 3201` → ver o site estático em http://localhost:3201, igual ao GitHub Pages
+- `npx playwright test` → testes automáticos (sobe o `out/` sozinho; rode `npm run build` antes)
 - `node scripts/screenshots.mjs / /contato` → prints nas 10 larguras em `test-results/screens/` (use `BASE_URL=http://localhost:3201` para o build de produção; no Git Bash, `MSYS_NO_PATHCONV=1`)
 
 ## Onde mexer

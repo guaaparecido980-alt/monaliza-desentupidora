@@ -4,14 +4,9 @@ import { servicos } from "@/content/servicos";
 import { navegacao } from "./navegacao";
 import { Emblema } from "@/components/marca/Emblema";
 
-/** Ano do build (new Date() precisa estar em "use cache" com Cache Components). */
-async function anoAtual() {
-  "use cache";
-  return new Date().getFullYear();
-}
-
-export async function Rodape() {
-  const ano = await anoAtual();
+export function Rodape() {
+  // Ano do build (o site é estático; um novo build atualiza o ano)
+  const ano = new Date().getFullYear();
   const wa = linkWhatsApp();
   const tel = linkTelefone();
   return (

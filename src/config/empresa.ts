@@ -18,7 +18,7 @@ export const empresa = {
   telefone: null as string | null,
   email: null as string | null,
   /** Domínio de produção, sem barra no fim. Também pode vir de NEXT_PUBLIC_SITE_URL. */
-  dominio: null as string | null,
+  dominio: "https://monalizadesentupidora.com.br" as string | null, // comprado na Hostinger (17/11)
   cidadePrincipal: { nome: "Curitiba", uf: "PR" }, // confirmado pelo dono (17/11)
   /** Confirmado pelo dono em 17/11: mesma área da Máxima. */
   cidadesAtendidas: [

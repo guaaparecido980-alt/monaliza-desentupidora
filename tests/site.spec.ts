@@ -97,8 +97,8 @@ test("sitemap, robots, manifest e ícones", async ({ request }) => {
   expect(await rb.text()).toContain("Sitemap:");
   expect((await request.get("/manifest.webmanifest")).status()).toBe(200);
   expect((await request.get("/icon.svg")).status()).toBe(200);
-  expect((await request.get("/apple-icon")).status()).toBe(200);
-  expect((await request.get("/opengraph-image")).status()).toBe(200);
+  expect((await request.get("/apple-icon.png")).status()).toBe(200);
+  expect((await request.get("/opengraph-image.png")).status()).toBe(200);
 });
 
 test("menu do celular abre, navega e fecha com Esc", async ({ page, isMobile }) => {

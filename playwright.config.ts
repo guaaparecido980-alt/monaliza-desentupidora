@@ -21,5 +21,5 @@ export default defineConfig({
   ],
   webServer: process.env.BASE_URL
     ? undefined
-    : { command: "npx next start -p 3201", url: BASE, reuseExistingServer: true, timeout: 120_000 },
+    : { command: "npx -y serve@14.2.4 out -l tcp://localhost:3201 --no-port-switching", url: BASE, reuseExistingServer: true, timeout: 120_000 },
 });

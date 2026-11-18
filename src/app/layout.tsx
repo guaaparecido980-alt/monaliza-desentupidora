@@ -13,8 +13,7 @@ import { Movimento } from "@/components/movimento/Movimento";
 import { servicos } from "@/content/servicos";
 import { Assinatura } from "@/components/marca/Assinatura";
 
-/** O site inteiro é estático: gerado no build, servido como HTML pronto. */
-export const ensureStatic = "navigation";
+/** O site inteiro é estático (output: "export" no next.config): gerado no build, servido como HTML pronto. */
 
 const barlow = Barlow_Condensed({
   variable: "--font-barlow",

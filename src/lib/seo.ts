@@ -37,7 +37,7 @@ export function schemaEmpresa() {
     name: empresa.nome,
     url: siteUrl,
     logo: `${siteUrl}/marca/monaliza-emblema.svg`,
-    image: `${siteUrl}/opengraph-image`,
+    image: `${siteUrl}/opengraph-image.png`,
     areaServed: empresa.cidadesAtendidas.map((c) => ({
       "@type": "City",
       name: c,
