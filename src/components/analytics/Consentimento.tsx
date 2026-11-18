@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { enviarPendentes, origemDaVisita } from "@/lib/analytics";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const CHAVE = "monaliza-consentimento";
@@ -21,6 +22,7 @@ function carregarGA(id: string) {
   };
   w.gtag("js", new Date());
   w.gtag("config", id, { anonymize_ip: true });
+  enviarPendentes();
 }
 
 /**
@@ -32,6 +34,7 @@ export function Consentimento() {
 
   useEffect(() => {
     if (!GA_ID) return;
+    origemDaVisita(); // grava de onde a pessoa veio já na primeira página
     let escolha: string | null = null;
     try {
       escolha = localStorage.getItem(CHAVE);

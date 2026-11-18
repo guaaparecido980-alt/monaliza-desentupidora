@@ -27,6 +27,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          # Opcionais. Criar em Settings → Secrets and variables → Actions → Variables.
+          # Vazios = site sem Analytics e sem tag de verificação (nada quebra).
+          NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_GSC_VERIFICATION: ${{ vars.NEXT_PUBLIC_GSC_VERIFICATION }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

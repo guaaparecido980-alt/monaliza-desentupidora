@@ -65,7 +65,9 @@ export default function Privacidade() {
               <p>
                 O site pode usar o Google Analytics 4 para entender, de forma agregada, quantas pessoas visitam as páginas e
                 quais botões de contato são usados. Ele só é carregado se você clicar em “Aceitar” no aviso de cookies. Se
-                recusar, nenhum cookie de medição é gravado. Sua escolha fica salva no seu próprio navegador.
+                recusar, nenhum cookie de medição é gravado. Sua escolha fica salva no seu próprio navegador. Para saber
+                quais canais trazem visitas, o site guarda durante a visita a origem do acesso (por exemplo, “veio do
+                Google”) e a primeira página aberta; isso só é enviado ao Analytics se você aceitar e não identifica você.
               </p>
             ) : (
               <p>

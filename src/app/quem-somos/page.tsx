@@ -9,7 +9,7 @@ import { Migalhas, TituloSecao, ChamadaFinal } from "@/components/ui/Blocos";
 import { Seta } from "@/components/ui/BotaoContato";
 
 const descricao =
-  "Conheça a Monaliza Desentupidora: desentupimento e serviços hidráulicos em Curitiba e região, com atendimento 24 horas, valor combinado antes e equipe identificada.";
+  "Conheça a Monaliza: desentupimento e hidráulica em Curitiba e região, com atendimento 24 horas, valor combinado antes e equipe identificada.";
 
 export const metadata: Metadata = meta({ titulo: "Quem somos", descricao, caminho: "/quem-somos" });
 

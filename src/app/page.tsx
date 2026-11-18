@@ -11,7 +11,7 @@ import { BotaoContato, Seta } from "@/components/ui/BotaoContato";
 import { TituloSecao, ListaFaq, ChamadaFinal } from "@/components/ui/Blocos";
 
 const descricao =
-  "Desentupidora em Curitiba e região com atendimento 24 horas: esgoto, pia, vaso, ralo, caixa de gordura, hidrojateamento e caça-vazamento. Valor combinado antes do serviço.";
+  "Desentupidora em Curitiba e região, 24 horas: esgoto, pia, vaso, ralo, caixa de gordura, hidrojateamento e caça-vazamento. Valor combinado antes do serviço.";
 
 export const metadata: Metadata = meta({
   titulo: `Desentupidora em Curitiba 24 horas | ${empresa.nome}`,

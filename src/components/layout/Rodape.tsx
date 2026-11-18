@@ -78,6 +78,20 @@ export function Rodape() {
                 </a>
               </li>
             )}
+            {empresa.perfilGoogle && (
+              <li>
+                <a href={empresa.perfilGoogle} target="_blank" rel="noopener noreferrer" data-evento="perfil_google_click" data-local="rodape" className="link-sub text-gelo">
+                  Ver no Google
+                </a>
+              </li>
+            )}
+            {empresa.linkAvaliacoes && (
+              <li>
+                <a href={empresa.linkAvaliacoes} target="_blank" rel="noopener noreferrer" data-evento="avaliacao_click" data-local="rodape" className="link-sub text-gelo">
+                  Avaliar no Google
+                </a>
+              </li>
+            )}
             {!wa && !tel && (
               <li>
                 <Link href="/contato#formulario" className="link-sub text-gelo">

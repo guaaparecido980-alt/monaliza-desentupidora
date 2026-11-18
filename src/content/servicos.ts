@@ -218,7 +218,7 @@ export const servicos: Servico[] = [
     nomeCurto: "Vaso sanitário",
     tituloSeo: "Desentupir vaso sanitário em Curitiba, a qualquer hora",
     descricaoSeo:
-      "Vaso sanitário entupido ou transbordando? A Monaliza atende em Curitiba e região 24 horas, desentope sem retirar o vaso sempre que possível e combina o valor antes.",
+      "Vaso sanitário entupido ou transbordando? Atendimento 24 horas em Curitiba e região, sem retirar o vaso sempre que possível e com valor combinado antes.",
     h1: "Desentupimento de vaso sanitário",
     problema: "Vaso que não dá descarga, água subindo, transbordo.",
     resumo:
@@ -297,7 +297,7 @@ export const servicos: Servico[] = [
     nomeCurto: "Ralo",
     tituloSeo: "Desentupir ralo de box, área e quintal em Curitiba",
     descricaoSeo:
-      "Ralo do box com água parada, ralo da área com mau cheiro ou quintal alagando? Desentupimos ralos em Curitiba e região com atendimento 24h e valor combinado antes.",
+      "Ralo do box com água parada, ralo da área com cheiro ou quintal alagando? Desentupimos ralos em Curitiba e região, 24h, com valor combinado antes.",
     h1: "Desentupimento de ralo",
     problema: "Box com água acumulada, ralo com mau cheiro, área alagando.",
     resumo:
@@ -377,7 +377,7 @@ export const servicos: Servico[] = [
     nomeCurto: "Caixa de gordura",
     tituloSeo: "Limpeza de caixa de gordura em Curitiba e região",
     descricaoSeo:
-      "Caixa de gordura cheia, com cheiro forte ou transbordando? Limpeza para casas, condomínios e restaurantes em Curitiba e região, com horário 24h para não parar sua cozinha.",
+      "Caixa de gordura cheia, com cheiro ou transbordando? Limpeza para casas, condomínios e restaurantes em Curitiba e região, 24h, sem parar sua cozinha.",
     h1: "Limpeza de caixa de gordura",
     problema: "Caixa cheia, cheiro forte no quintal, pia da cozinha voltando.",
     resumo:
@@ -457,7 +457,7 @@ export const servicos: Servico[] = [
     nomeCurto: "Hidrojateamento",
     tituloSeo: "Hidrojateamento de tubulações em Curitiba",
     descricaoSeo:
-      "Hidrojateamento para remover gordura endurecida, crostas e resíduos de tubulações em casas, condomínios e empresas de Curitiba e região. Limpeza corretiva e preventiva.",
+      "Hidrojateamento para tirar gordura endurecida, crostas e resíduos da tubulação de casas, condomínios e empresas em Curitiba e região. Corretivo e preventivo.",
     h1: "Hidrojateamento de tubulações",
     problema: "Cano com crosta, gordura endurecida, entupimento que sempre volta.",
     resumo:

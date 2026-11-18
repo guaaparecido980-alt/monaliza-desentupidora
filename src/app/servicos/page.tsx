@@ -9,7 +9,7 @@ import { BotaoContato, Seta } from "@/components/ui/BotaoContato";
 import { Migalhas, ChamadaFinal } from "@/components/ui/Blocos";
 
 const descricao =
-  "Catálogo de serviços da Monaliza em Curitiba e região: desentupimento de esgoto, pia, vaso e ralo, limpeza de caixa de gordura, hidrojateamento, caça-vazamento e encanador.";
+  "Serviços da Monaliza em Curitiba e região: desentupimento de esgoto, pia, vaso e ralo, caixa de gordura, hidrojateamento, caça-vazamento e encanador.";
 
 export const metadata: Metadata = meta({
   titulo: "Serviços de desentupimento em Curitiba",

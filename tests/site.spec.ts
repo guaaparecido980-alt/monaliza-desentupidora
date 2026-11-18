@@ -32,6 +32,9 @@ for (const rota of rotas) {
     expect((await page.title()).length).toBeGreaterThan(10);
     const desc = await page.locator('meta[name="description"]').getAttribute("content");
     expect(desc && desc.length).toBeGreaterThan(50);
+    expect(desc!.length, "description acima de ~160 caracteres é cortada no Google").toBeLessThanOrEqual(160);
+    // Imagem de compartilhamento em todas as páginas (WhatsApp/Facebook)
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /\/opengraph-image\.png$/);
     const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
     expect(canonical).toMatch(new RegExp(`${rota === "/" ? "/?$" : rota + "$"}`));
     await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");

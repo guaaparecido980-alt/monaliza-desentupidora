@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Migalhas, TituloSecao, ChamadaFinal } from "@/components/ui/Blocos";
 
 const descricao =
-  "Regiões atendidas pela Monaliza Desentupidora: Curitiba, São José dos Pinhais, Pinhais, Colombo, Araucária, Almirante Tamandaré, Fazenda Rio Grande e Campo Largo.";
+  "Onde a Monaliza atende: Curitiba, São José dos Pinhais, Pinhais, Colombo, Araucária, Almirante Tamandaré, Fazenda Rio Grande e Campo Largo.";
 
 export const metadata: Metadata = meta({
   titulo: "Desentupidora em Curitiba e região metropolitana",

@@ -37,6 +37,18 @@ export const empresa = {
   cnpj: null as string | null,
   redes: { instagram: null as string | null, facebook: null as string | null },
   /**
+   * Link do Perfil da Empresa no Google (Google Maps), ex.: "https://maps.app.goo.gl/...".
+   * PENDENTE: o perfil ainda não foi informado. Quando preencher, aparece "Ver no Google"
+   * no contato e no rodapé e entra no schema (sameAs / hasMap).
+   */
+  perfilGoogle: null as string | null,
+  /**
+   * Link direto para o cliente deixar avaliação (no perfil do Google: "Pedir avaliações").
+   * PENDENTE. Quando preencher, aparece "Avaliar no Google" no contato e no rodapé.
+   * Nunca colocar nota/estrelas no site sem avaliações reais.
+   */
+  linkAvaliacoes: null as string | null,
+  /**
    * Diferenciais confirmados pelo dono ("é tudo igual à Máxima", 17/11).
    * Sem números: prazo de garantia e tempo de chegada NÃO foram informados.
    */

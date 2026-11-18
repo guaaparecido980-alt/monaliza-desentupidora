@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
-import { empresa, siteUrl, linkWhatsApp } from "@/config/empresa";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { empresa, siteUrl } from "@/config/empresa";
 import type { Servico } from "@/content/servicos";
+
+/**
+ * Imagem de compartilhamento (WhatsApp, Facebook, LinkedIn).
+ * O Next só aplica o opengraph-image.png do app/ quando a página não define openGraph;
+ * como cada página define o seu, a imagem precisa ir junto aqui.
+ */
+const imagemOg = {
+  url: "/opengraph-image.png",
+  width: 1200,
+  height: 630,
+  alt: readFileSync(join(process.cwd(), "src/app/opengraph-image.alt.txt"), "utf8").trim(),
+};
 
 type MetaInput = { titulo: string; descricao: string; caminho: string; semSufixo?: boolean };
 
@@ -18,8 +32,9 @@ export function meta({ titulo, descricao, caminho, semSufixo }: MetaInput): Meta
       siteName: empresa.nome,
       locale: "pt_BR",
       type: "website",
+      images: [imagemOg],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: { card: "summary_large_image", images: [imagemOg.url] },
   };
 }
 
@@ -66,8 +81,11 @@ export function schemaEmpresa() {
       addressCountry: "BR",
     };
   }
-  const redes = [empresa.redes.instagram, empresa.redes.facebook, linkWhatsApp()].filter(Boolean);
-  if (redes.length) base.sameAs = redes;
+  // sameAs = perfis oficiais da empresa (Instagram, Facebook, Perfil da Empresa no Google).
+  // Link de WhatsApp não é perfil, por isso não entra aqui.
+  const perfis = [empresa.redes.instagram, empresa.redes.facebook, empresa.perfilGoogle].filter(Boolean);
+  if (perfis.length) base.sameAs = perfis;
+  if (empresa.perfilGoogle) base.hasMap = empresa.perfilGoogle;
   return base;
 }
 

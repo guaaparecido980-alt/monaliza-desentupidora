@@ -5,6 +5,7 @@ import { servicos, getServico } from "@/content/servicos";
 import { empresa, listaCidades } from "@/config/empresa";
 import { meta, schemaBreadcrumb, schemaFaq, schemaPagina, schemaServico } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { VisualizacaoServico } from "@/components/analytics/VisualizacaoServico";
 import { IlustracaoServico } from "@/components/ilustracoes/Servicos";
 import { BotaoContato, Seta } from "@/components/ui/BotaoContato";
 import { Migalhas, ListaFaq, ChamadaFinal, TituloSecao } from "@/components/ui/Blocos";
@@ -44,6 +45,7 @@ export default async function PaginaServico({ params }: PageProps<"/servicos/[sl
           schemaFaq(s.faq),
         ]}
       />
+      <VisualizacaoServico servico={s.slug} />
 
       {/* Abertura */}
       <section className="subsolo grade relative overflow-hidden" aria-labelledby="titulo-pagina">

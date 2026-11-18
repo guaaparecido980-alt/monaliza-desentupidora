@@ -9,7 +9,7 @@ import { FormularioAtendimento } from "@/components/formulario/FormularioAtendim
 import { IconeWhats, Seta } from "@/components/ui/BotaoContato";
 
 const descricao =
-  "Fale com a Monaliza Desentupidora: peça atendimento para desentupimento, hidrojateamento, caixa de gordura ou vazamento em Curitiba e região. Atendimento 24 horas.";
+  "Fale com a Monaliza: atendimento 24 horas para desentupimento, hidrojateamento, caixa de gordura ou vazamento em Curitiba e região, por WhatsApp ou ligação.";
 
 export const metadata: Metadata = meta({ titulo: "Contato e orçamento", descricao, caminho: "/contato" });
 
@@ -79,6 +79,23 @@ export default function Contato() {
                       <a href={`mailto:${empresa.email}`} className="text-gelo underline">
                         {empresa.email}
                       </a>
+                    </dd>
+                  </div>
+                )}
+                {(empresa.perfilGoogle || empresa.linkAvaliacoes) && (
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-nevoa">Google</dt>
+                    <dd className="flex flex-wrap justify-end gap-x-4 text-right">
+                      {empresa.perfilGoogle && (
+                        <a href={empresa.perfilGoogle} target="_blank" rel="noopener noreferrer" data-evento="perfil_google_click" data-local="contato" className="text-gelo underline">
+                          Ver no Google
+                        </a>
+                      )}
+                      {empresa.linkAvaliacoes && (
+                        <a href={empresa.linkAvaliacoes} target="_blank" rel="noopener noreferrer" data-evento="avaliacao_click" data-local="contato" className="text-gelo underline">
+                          Avaliar no Google
+                        </a>
+                      )}
                     </dd>
                   </div>
                 )}
