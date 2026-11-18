@@ -43,6 +43,7 @@ export function Cabecalho({ servicos, logo }: { servicos: { slug: string; nomeCu
   const ativo = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
   return (
+    <>
     <header
       className={`sticky top-0 z-50 text-gelo transition-[background-color,box-shadow] duration-300 ${
         rolou || aberto ? "bg-abismo/95 shadow-[0_1px_0_var(--color-linha-escura)] backdrop-blur-md" : "bg-abismo"
@@ -107,11 +108,13 @@ export function Cabecalho({ servicos, logo }: { servicos: { slug: string; nomeCu
         </div>
       </div>
 
-      {/* Menu do celular / tablet */}
+    </header>
+      {/* Menu do celular / tablet — fica FORA do <header>: o backdrop-blur do cabeçalho
+          prenderia um elemento "fixed" dentro dele (o menu ficava com 32px de altura). */}
       <div
         id="menu-movel"
         hidden={!aberto}
-        className="grade fixed inset-x-0 bottom-0 top-[4.5rem] overflow-y-auto bg-abismo pb-[calc(2rem+env(safe-area-inset-bottom))] sm:top-20 lg:hidden"
+        className="grade fixed inset-x-0 bottom-0 top-[4.5rem] z-50 overflow-y-auto bg-abismo pb-[calc(2rem+env(safe-area-inset-bottom))] sm:top-20 lg:hidden"
       >
         <nav aria-label="Menu" className="wrap pt-6">
           <ul className="border-t border-linha-escura">
@@ -140,6 +143,6 @@ export function Cabecalho({ servicos, logo }: { servicos: { slug: string; nomeCu
           </ul>
         </nav>
       </div>
-    </header>
+    </>
   );
 }

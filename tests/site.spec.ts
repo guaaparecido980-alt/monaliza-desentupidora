@@ -104,9 +104,15 @@ test("sitemap, robots, manifest e ícones", async ({ request }) => {
 test("menu do celular abre, navega e fecha com Esc", async ({ page, isMobile }) => {
   test.skip(!isMobile, "só no celular");
   await page.goto("/");
+  await page.evaluate(() => window.scrollTo(0, 900)); // com a página rolada (cabeçalho com desfoque)
   const botao = page.getByRole("button", { name: "Abrir menu" });
   await botao.click();
   await expect(page.locator("#menu-movel")).toBeVisible();
+  // O menu precisa ocupar a tela de verdade (bug anterior: ficava com 32px de altura)
+  const caixa = await page.locator("#menu-movel").boundingBox();
+  const alturaTela = page.viewportSize()!.height;
+  expect(caixa!.height).toBeGreaterThan(alturaTela * 0.6);
+  await expect(page.locator("#menu-movel").getByRole("link", { name: /Contato/ })).toBeInViewport();
   await page.keyboard.press("Escape");
   await expect(page.locator("#menu-movel")).toBeHidden();
   await botao.click();
