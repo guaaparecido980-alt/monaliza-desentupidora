@@ -147,7 +147,7 @@ export default function Inicio() {
                 <Link
                   href={`/servicos/${s.slug}`}
                   data-ativa-no-centro
-                  className="group grid grid-cols-[1fr_6.5rem] items-center gap-x-4 gap-y-2 py-6 [--fundo-ilustra:var(--color-papel)] sm:grid-cols-[4.5rem_1fr_7rem_auto] sm:gap-x-5 md:py-7 lg:grid-cols-[5rem_minmax(0,1.1fr)_minmax(0,1fr)_9rem_auto]"
+                  className="group grid grid-cols-[minmax(0,1fr)_4.75rem] items-center gap-x-3 xs:grid-cols-[minmax(0,1fr)_6.5rem] xs:gap-x-4 gap-y-2 py-6 [--fundo-ilustra:var(--color-papel)] sm:grid-cols-[4.5rem_1fr_7rem_auto] sm:gap-x-5 md:py-7 lg:grid-cols-[5rem_minmax(0,1.1fr)_minmax(0,1fr)_9rem_auto]"
                 >
                   <span className="hidden font-mono text-[0.72rem] tracking-[0.12em] text-aco sm:block">
                     P-{String(i + 1).padStart(2, "0")}
